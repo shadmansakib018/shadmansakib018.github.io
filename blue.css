@@ -1,0 +1,29 @@
+:root{
+	--mainColor:#375479;
+	--secondaryColor:#2a395b;
+
+	--borderColor:#164D56;
+
+	--mainText:#fff;
+	--secondaryText:#eeeeee;
+
+	--themeDotBorder:#FFF;
+
+	--previewBg:rgb(25, 39, 52, 0.8);
+	--previewShadow:#375479;
+
+
+	--buttonColor:#17a2b8;
+
+
+}
+#preview{
+	background-color: var(--previewBg);
+}
+svg{
+	fill: #fff;
+	cursor: pointer;
+}
+svg:hover{
+	fill: #21ffa7;	
+}
