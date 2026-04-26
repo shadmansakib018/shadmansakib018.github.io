@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default theme variables (mutedPastels) */
+:root {
+  --color-bg: #2C2C2C;
+  --color-bg-secondary: #363636;
+  --color-text: #E4E4E4;
+  --color-text-muted: #A0A0A0;
+  --color-accent1: #A8DADC;
+  --color-accent2: #FFC1CC;
+  --color-button: #B39CD0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis handles smooth scroll */
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent1);
+  border-radius: 99px;
+  opacity: 0.5;
+}
+::-webkit-scrollbar-thumb:hover {
+  opacity: 1;
+}
+
+/* Text selection */
+::selection {
+  background: var(--color-accent1);
+  color: #1a1a1a;
+}
+
+/* Gradient text animation */
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Float animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+/* Meteor animation */
+@keyframes meteor {
+  0% { transform: rotate(215deg) translateX(0); opacity: 1; }
+  70% { opacity: 1; }
+  100% { transform: rotate(215deg) translateX(-600px); opacity: 0; }
+}
+
+/* Pulse glow — opacity only, no scale/transform to avoid layout side effects */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 0.85; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+  will-change: opacity;
+}
+
+/* Ensure framer-motion layout transitions don't cause flicker */
+.framer-motion-layout {
+  transform-origin: center center;
+}
