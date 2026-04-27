@@ -101,18 +101,21 @@ export const publications = [
     venue: 'IEEE ICCT 2025',
     year: 2025,
     badge: 'IEEE',
+    link: 'https://ieeexplore.ieee.org/abstract/document/11374147'
   },
   {
     title: 'Dynamic Load Balancing in Cloud Infrastructure for Energy Efficiency',
     venue: 'IEEE Cloud Summit 2025',
     year: 2025,
     badge: 'IEEE',
+    link: 'https://ieeexplore.ieee.org/abstract/document/11108127'
   },
   {
     title: 'ML & NLP-Based Mental Illness Classification',
     venue: 'Springer ICICTD 2022',
     year: 2022,
     badge: 'Springer',
+    link:'https://link.springer.com/chapter/10.1007/978-981-19-7528-8_7'
   },
 ]
 

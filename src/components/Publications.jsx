@@ -14,8 +14,8 @@ const badgeColors = {
 function SectionArt({ theme }) {
   return (
     <div
-      className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none select-none overflow-hidden"
-      style={{ opacity: 0.04 }}
+      className="absolute top-1/2 -translate-y-1/2 pointer-events-none select-none overflow-hidden"
+      style={{ opacity: 0.07 }}
     >
       <TbAtom style={{ width: 380, height: 380, color: theme.accent1 }} />
     </div>
@@ -31,7 +31,7 @@ export function Publications() {
       className="relative py-24 px-6 overflow-hidden"
       style={{ background: theme.bg }}
     >
-      <SectionArt theme={theme} />
+      {/* <SectionArt theme={theme} /> */}
 
       <div
         className="absolute top-0 left-0 right-0 h-px"
@@ -47,7 +47,7 @@ export function Publications() {
             return (
               <BlurFade key={i} delay={i * 0.12}>
                 <MagicCard className="p-6">
-                  <div className="flex items-start gap-4">
+                  <div onClick={() => window.open(pub.link, '_blank')} className="flex items-start gap-4">
                     {/* Number */}
                     <div
                       className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-sm font-bold font-mono"

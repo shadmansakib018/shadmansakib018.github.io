@@ -53,6 +53,11 @@ body {
   color: #1a1a1a;
 }
 
+/* Spinner (used by login + protected route loading) */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 /* Gradient text animation */
 @keyframes gradient-x {
   0%, 100% { background-position: 0% 50%; }
